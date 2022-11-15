@@ -1,0 +1,172 @@
+---
+layout: standard
+<!-- title: Research -->
+list_title: ' '
+permalink: /research/
+---
+<script>
+function myFunction(idname) {
+  var x = document.getElementById(idname);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+<h1> Publications</h1>
+
+<hr>
+<div class="pub-grid-container">
+  <!-- <div> -->
+<div class="paper_year">2022</div>
+<div class="paper_details">
+<h2 class="paper_title"> Learning Decentralized Controllers for Segregation of Heterogeneous Robot Swarms
+with Graph Neural Networks</h2>
+<p class="authors_bold">Oyindamola Omotuyi</p>  <p class="authors">and Manish Kumar</p>
+<p class="conference">International Conference on Manipulation, Automation, and Robotics at Small Scales
+(MARSS), Toronto, Canada. </p>
+<!-- <div><img class ="paper_img" src="/assets/franka-nut-bolt-screw.png" alt="franka-nut-bolt-screw" /></div> -->
+
+
+  <a class="btn paper_icons" data-toggle="collapse" href="#abstract-decentralized" role="button" aria-expanded="false" aria-controls="abstract-decentralized">
+    Abstract
+  </a>
+  <a href="https://ieeexplore.ieee.org/document/9870482" target="_blank" class="btn paper_icons" role="button" >
+  Full Paper
+  </a>
+
+<div class="collapse" id="abstract-decentralized">
+  <p>
+  In this paper, we studied the problem of finding decentralized controllers for large-scale heterogeneous
+  robot swarms exhibiting segregative behaviors. As seen in nature, Segregative behaviors involve sorting
+  a group of robots into groups based on their type. Our approach involves learning controllers that utilize
+  local information at test time by imitating the policy of a centralized controller based on a differential
+  potential concept at training time. We parameterized our policy using a time-varying aggregation graph neural
+  network with multi-hop communication. This incorporates information not only from immediate neighbors but
+   distant neighbors. We showed that our controller outperformed a local controller that considers only
+   immediate neighbors and achieved similar performance to the centralized controller through varied
+   experiments. In addition, we demonstrated the scalability of our method by exploring larger swarms
+   and different groups.
+  </p>
+</div>
+
+
+ </div>
+
+</div>
+
+<br>
+<hr>
+
+<div class="pub-grid-container">
+  <!-- <div> -->
+<div class="paper_year">2021</div>
+<div class="paper_details">
+<h2 class="paper_title"> UAV Visual-Inertial Dynamics (VI-D) Odometry using Unscented Kalman Filter</h2>
+<p class="authors_bold">Oyindamola Omotuyi</p>  <p class="authors">and Manish Kumar</p>
+<p class="conference">IFAC-PapersOnLine, Volume 54, Issue 20, 2021, Pages 814-819, ISSN 2405-8963. </p>
+<!-- <div><img class ="paper_img" src="/assets/franka-nut-bolt-screw.png" alt="franka-nut-bolt-screw" /></div> -->
+<a class="btn paper_icons" data-toggle="collapse" href="#abstract-vid" role="button" aria-expanded="false" aria-controls="abstract-vid">
+  Abstract
+</a>
+<a href="https://www.sciencedirect.com/science/article/pii/S2405896321023168" target="_blank" class="btn paper_icons" role="button" >
+Full Paper
+</a>
+
+<div class="collapse" id="abstract-vid">
+<p>
+  Different approaches to Visual-Inertial odometry(VIO) has been presented in literature.
+  However, few research works exploits the quadrotor translational and rotational dynamics
+  and the known thrust and torque inputs. Additional information from the dynamics with known
+  control inputs improves the state estimation. This paper is focused on the estimation of the
+  quadrotor UAV 6 DOF pose by fusing the information from the dynamics of the quadrotor coupled
+  with visual-inertial measurements using an Unscented Kalman Filter. The thrust and torque inputs
+  drives the prediction model while the VIO system provides 6 DOF pose, velocity and unbiased angular
+  velocity of the vehicle. The results shows that our approach improves the state estimates by about
+  2-5% in translation and 37% in rotation.
+</p>
+</div>
+
+
+<br><br>
+
+
+<div class="paper_details">
+<h2 class="paper_title"> Distributed Quadrotor UAV Tracking using a Team of Unmanned Ground Vehicles</h2>
+<p class="authors_bold">Oyindamola Omotuyi</p>,  <p class="authors">Sameer Pokhrel and Rajnikant Sharma</p>
+<p class="conference">American Institute of Aeronautics and Astronautics Scitech 2021 Forum. </p>
+<!-- <div><img class ="paper_img" src="/assets/franka-nut-bolt-screw.png" alt="franka-nut-bolt-screw" /></div> -->
+<a class="btn paper_icons" data-toggle="collapse" href="#abstract-distributed_ugv" role="button" aria-expanded="false" aria-controls="abstract-distributed_ugv">
+  Abstract
+</a>
+<a href="https://arc.aiaa.org/doi/10.2514/6.2021-0266" target="_blank" class="btn paper_icons" role="button" >
+Full Paper
+</a>
+
+<div class="collapse" id="abstract-distributed_ugv">
+<p>
+  In this paper, we present an algorithm to optimally track a non-cooperative quadrotor using a team of Unmanned Ground Vehicles (UGVs)
+  which are equipped with GPS as well as radar capable of sensing range, azimuth angle and elevation angle
+  measurements. First, a distributed information filter algorithm is developed for each UGV to locally
+  estimate the position and velocity of the quadrotor using its information and information from neighboring
+  UGVs. We then fuse the information from various UGVs using a Consensus Filter such that their estimate of
+  the state of the quadrotor converges. However, the accuracy of the estimation by the consensus filter
+  depends upon the relative position of the sensors. Hence, it is necessary to design a control policy
+  that leads to optimum configuration of UGVs in order to maximize the utility of measurement.
+  A Model Predictive Controller(MPC) is developed to optimally control the UGVs to improve the
+  state estimation. By defining a proper cost function and optimization algorithm in MPC, we are able
+  to control the path of UGVs to increase the accuracy of estimating the position and velocity of a
+  non-cooperative quadrotor.
+</p>
+</div>
+
+
+</div>
+</div>
+</div>
+<br>
+<hr>
+<div class="pub-grid-container">
+  <!-- <div> -->
+<div class="paper_year">2018</div>
+<div class="paper_details">
+<h2 class="paper_title"> Robot Navigation Model in a Multi-Target Domain Amidst Static and Dynamic Obstacles</h2>
+<p class="authors">Michael K. Ayomoh</p>, <p class="authors_bold">Oyindamola Omotuyi</p><p class="authors">, Adriaan J.G. Roux, Oluwole A Olufayo</p>
+<p class="conference">Proceedings of the IASTED International Conference Intelligent Systems and
+Control (ISC 2018) (pp. 44-51) </p>
+<a class="btn paper_icons" data-toggle="collapse" href="#abstract-multitarget" role="button" aria-expanded="false" aria-controls="abstract-multitarget">
+  Abstract
+</a>
+<a href="https://www.semanticscholar.org/paper/Robot-Navigation-Model-in-a-Multi-Target-Domain-and-Ayomoh-Omotuyi/5fa1211b93a6064363dadc4819f7fc91ea84686c" target="_blank" class="btn paper_icons" role="button" >
+Full Paper
+</a>
+
+<div class="collapse" id="abstract-multitarget">
+<p>
+  This paper presents an efficient robot navigation model in a multi-target domain amidst static and
+  dynamic workspace obstacles. The problem is that of developing an optimal algorithm to minimize the total
+  travel time of a robot as it visits all target points within its task domain amidst unknown workspace
+  obstacles and finally return to its initial position. In solving this problem, a classical algorithm was
+  first developed to compute the optimal number of paths to be travelled by the robot amidst the network
+  of paths. The principle of shortest distance between robot and targets was used to compute the target
+  point visitation order amidst workspace obstacles. A hybrid modelling scheme premised on geometrical
+  considerations was applied to determine the length of obstacles encountered by the robot. Also, a dynamic
+   model premised on the collapse of the radiation cone was proposed and used to estimate the velocity of
+   a dynamic obstacle along the robot’s path.
+
+</p>
+</div>
+
+ </div>
+
+</div>
+<br> <br>
+<!--
+<h1> Selected Projects</h1>
+<hr>
+<ol >
+  <li >Cras justo odio</li>
+  <li>Cras justo odio</li>
+  <li >Cras justo odio</li>
+</ol> -->
