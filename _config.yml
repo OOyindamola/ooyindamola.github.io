@@ -58,7 +58,6 @@ common-ext-css:
 sass:
   sass_dir: assets/css
 exclude:
-  - _site/
   - .sass-cache/
   - .jekyll-cache/
   - gemfiles/
