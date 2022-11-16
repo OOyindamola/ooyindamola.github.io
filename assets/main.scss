@@ -441,6 +441,9 @@ z-index: 1;
 
 .blog_date { grid-area: blog_date;
   margin-left: 25px;
+  a {
+    text-decoration: none;
+  }
 }
 
 .blog_date p {
