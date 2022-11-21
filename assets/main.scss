@@ -34,7 +34,7 @@ h1 {
 .site-header{
   // @extend fancy-border;
   position: fixed;
-  overflow: hidden;
+  // overflow: hidden;
   top: 0;
  z-index: 1;
  width: 100%;
@@ -536,19 +536,16 @@ color: white;
   margin-left: 25px;
  }
 
- // //
- // /* For presentation only, no need to copy the code below */
- // .grid-container * {
- //   border: 1px solid red;
- //   position: relative;
- // }
- //
- // .grid-container *:after {
- //   content:attr(class);
- //   position: absolute;
- //   top: 0;
- //   left: 0;
- // }
+.project_title{
+  margin: 0px;
+  display: inline;
+  font-size: 18px;
+  font-weight: 500;
+  // margin: 10px 25px 5px 25px;
+  padding: 0;
+  font-family: "Roboto",sans-serif;
+  color: #3c4858;
+}
 
 .blog_img {
   @extend .fancy-border;
