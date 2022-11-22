@@ -12,6 +12,29 @@ body {
     display: inline-block !important;
 
 }
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+#myBtnContainer{
+  text-align: center;
+
+}
+
 
 // .site-nav .menu-icon { display: inline; }
 $grey-link-color:     #999 !default;
@@ -32,11 +55,9 @@ h1 {
 }
 
 .site-header{
-  // @extend fancy-border;
   position: fixed;
-  // overflow: hidden;
   top: 0;
- z-index: 1;
+ // z-index: 1;
  width: 100%;
  background-color: white;
  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -377,6 +398,7 @@ z-index: 1;
   text-decoration: none;
   font-weight: bold;
   color: white;
+  float: right;
 }
 
 .dl{
@@ -398,7 +420,24 @@ z-index: 1;
   margin-bottom: 5px;
 
 }
+.jt{
+  text-align: justify;
+}
 
+.vac{
+
+  vertical-align: center;
+
+}
+.iw {
+  width: 150px;
+}
+.fr{
+  float: right;
+}
+.tc{
+  text-align: center;
+}
 .talk_link , .talk_link1 {grid-area: talk_link;
   display:inline-block;
   float: right;
@@ -691,8 +730,14 @@ color: white;
     color:#191970;
 }
 .h1_style {
-  font-weight: 700;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 400;
+	font-family:'Roboto';
+}
+
+.h2_style{
+  font-weight: 400;
+  font-family: "Roboto",sans-serif;
+  color: #3c4858;
 }
 .text-center{
   text-align: center;
@@ -740,4 +785,79 @@ color: white;
   display: none;
   // border-radius: 5.325rem;
     // box-shadow: 9px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.fadeinleft {
+	opacity:0;
+	margin-left:-300px;
+	max-width:100%;
+}
+
+.align-center{
+  text-align: center;
+}
+.filterDiv {
+    display: none;
+    animation:animatezoom 0.9s;
+    opacity: 1;
+}
+
+.show {
+  display: block;
+  // animation:animatezoom 0.9s;
+}
+
+.container {
+  margin-top: 20px;
+  overflow: hidden;
+}
+//
+// .filterDiv {
+//   animation: fadeEffect 1s; /* Fading effect takes 1 second */
+// }
+//
+// .filterDiv {
+//   animation: fadeEffect 1s; /* Fading effect takes 1 second */
+// }
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.anim_zoom {animation:animatezoom 0.9s}
+
+@keyframes animatezoom{
+  from{transform:scale(0)} to{transform:scale(1)}
+}
+
+
+//bibtex
+.modal-body {
+	position: relative;
+	flex: auto;
+	padding: 1rem;
+}
+.hljs {
+	display: block;
+	overflow-x: auto;
+	padding: .5em;
+	background: #282a36;
+}
+.modal-footer > * {
+	margin: .25rem;
+}
+.mb-1, .my-1 {
+	margin-bottom: .25rem !important;
 }

@@ -11,32 +11,15 @@ layout: default
 
 
 <script>
-//
-// //Get the button
-// let mybutton = document.getElementById("btn-back-to-top");
-//
-// // When the user scrolls down 20px from the top of the document, show the button
-// window.onscroll = function () {
-//   scrollFunction();
-// };
-//
-// function scrollFunction() {
-//
-//   if (
-//     document.body.scrollTop > 20 ||
-//     document.documentElement.scrollTop > 20
-//   ) {
-//     mybutton.style.display = "block";
-//   } else {
-//     mybutton.style.display = "none";
-//   }
-// }
-// // When the user clicks on the button, scroll to the top of the document
-// mybutton.addEventListener("click", backToTop);
-//
+
+
 function backToTop() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+  // document.body.scrollTop = 0;
+  // document.documentElement.scrollTop = 0;
+  $("html, body").animate({
+    scrollTop: 0
+  }, 800);
+  return false;
 }
 
 let mybutton = document.getElementById("btn-back-to-top");
@@ -49,7 +32,9 @@ function myFunction() {
       document.body.scrollTop > 20 ||
       document.documentElement.scrollTop > 20
     ) {
-      mybutton.style.display = "block";
+      // mybutton.style.display = "block";
+      $('#btn-back-to-top').fadeIn();
+
     } else {
       mybutton.style.display = "none";
     }
@@ -61,7 +46,74 @@ function myFunction() {
   document.getElementById("myBar").style.width = scrolled + "%";
 }
 
+//btn-toolbar
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) {
+      w3AddClass(x[i], "show");
+    };
+  }
+}
+
+function w3AddClass(element, name) {
+  // element.style.display = "none";
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i]; //+ " " + "anim_zoom";
+    }
+  }
 
 
+}
 
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+//fade in sections
+$(window).on("load",function() {
+  $(window).scroll(function() {
+    var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+    $(".fade").each(function() {
+      /* Check the location of each desired element */
+      var objectBottom = $(this).offset().top + $(this).outerHeight();
+
+      /* If the element is completely within bounds of the window, fade it in */
+      if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+        if ($(this).css("opacity")==0) {$(this).fadeTo(500,1);}
+      } else { //object goes out of view (scrolling up)
+        if ($(this).css("opacity")==1) {$(this).fadeTo(500,0);}
+      }
+    });
+  }).scroll(); //invoke scroll-handler on page-load
+});
 </script>

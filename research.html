@@ -4,16 +4,16 @@ layout: standard
 list_title: ' '
 permalink: /research/
 ---
-<script>
-function myFunction(idname) {
-  var x = document.getElementById(idname);
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-</script>
+<div id="myBtnContainer">
+<button class="btn active" onclick="filterSelection('all')"> Show all</button>
+<button class="btn" onclick="filterSelection('publications')"> Publications</button>
+<button class="btn" onclick="filterSelection('selected_projects')"> Selected Projects</button>
+</div>
+
+<div class="container">
+
+<div class="filterDiv publications">
+
 <h1> Publications</h1>
 
 <hr>
@@ -35,6 +35,44 @@ with Graph Neural Networks</h2>
   <a href="https://ieeexplore.ieee.org/document/9870482" target="_blank" class="btn paper_icons" role="button" >
   Full Paper
   </a>
+  <!-- <a href="#" class="btn paper_icons"  data-toggle="modal" data-target="#modal" role="button" >
+  Cite
+  </a>
+  <div id="modal" class="modal fade" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Cite</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <pre><code class="tex hljs">@INPROCEEDINGS{9870482,
+
+  author={Omotuyi, Oyindamola and Kumar, Manish},
+  booktitle={2022 International Conference on Manipulation, Automation and Robotics at Small Scales (MARSS)},
+  title={Learning Decentralized Controllers for Segregation of Heterogeneous Robot Swarms with Graph Neural Networks},
+  year={2022},
+  volume={},
+  number={},
+  pages={1-6},
+  doi={10.1109/MARSS55884.2022.9870482}}
+
+  </code></pre>
+        </div>
+        <div class="modal-footer">
+          <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+            <i class="fa fa-copy"></i> Copy
+          </a>
+          <a class="btn btn-outline-primary my-1 js-download-cite" href="/publications/segregation_il/cite.bib" target="_blank">
+            <i class="fa fa-download"></i> Download
+          </a>
+          <div id="modal-error"></div>
+        </div>
+      </div>
+    </div>
+  </div> -->
 
 <div class="collapse" id="abstract-decentralized">
   <p>
@@ -59,7 +97,7 @@ with Graph Neural Networks</h2>
 <br>
 <hr>
 
-<div class="pub-grid-container">
+<div class="pub-grid-container fade">
   <!-- <div> -->
 <div class="paper_year">2021</div>
 <div class="paper_details">
@@ -163,31 +201,40 @@ Full Paper
 </div>
 <br> <br>
 
-<button
-        type="button"
-        class="btn btn-danger btn-floating btn-lg"
-        id="btn-back-to-top"
-        >
-  <i class="fa fa-arrow-up"></i>
-</button>
+</div>
 
+<div class="filterDiv selected_projects">
 <h1> Selected Projects</h1>
 <hr>
-<ol >
+<ul >
+  <li> <p  class="project_title">Telehealth Drone</p>
 
+      <a target="_blank" class="btn my_btn_blue" href ="https://www.uc.edu/news/articles/2021/03/virtual-medicine--new-uc-telehealth-drone-makes-house-calls.html" style="color:white"  role="button">
+    News</a>
+    <div class="row">
+ <div class="col-2"><img class ="project_img iw tc"  src="/assets/tele_drone.png" alt="ai_final_project overview" /></div>
+ <div class="col-9"><br><p class="jt vac">Designed the software stack for keyboard control and obstacle
+ avoidance of an indoor remotely semi-piloted unmanned aerial vehicle for medical supplies delivery.</p></div>
+
+</div>
+
+
+
+
+</li>
 
 
   <li> <p  class="project_title">Filtering, Localization and SLAM algorithms for mobile robots</p>
 
       <a target="_blank" class="btn my_btn_blue" href ="https://github.com/OOyindamola/Probabilistic-Robotics-Algorithms" style="color:white"  role="button">
     Code</a>
-  <p> This repo includes kalman filter, extended kalman filter, unscented kalman filter, EKF/UKF localization with and without unknown landmarks
+  <p class="jt"> This repo includes kalman filter, extended kalman filter, unscented kalman filter, EKF/UKF localization with and without unknown landmarks
     and EKF SLAM implementation from the book "Thrun, S., et al. <b><a href="https://docs.ufpr.br/~danielsantos/ProbabilisticRobotics.pdf" target="_blank" >
       Probabilistic robotics</a></b>." </p> </li>
   <li><p  class="project_title">Introduction to Applied Artificial Intelligence and Machine Learning Tools using Scikit Learn </p><a class="btn my_btn_blue" target="_blank"
     href ="https://github.com/OOyindamola/Applied-Machine-Learning-Tools-Scikit-learn" style="color:white"  role="button">
     Code</a>
-    <p> This repo includes different algorithms I implemented during my class. It includes linear and logistic regression, minimum distance classifier (MDC),
+    <p class="jt"> This repo includes different algorithms I implemented during my class. It includes linear and logistic regression, minimum distance classifier (MDC),
       k-Nearest Neighbors and Neural networks using sklearn. </p>
       <p>
       <p class="project_title"> Final Project Overview: <i> Classification
@@ -201,5 +248,20 @@ Full Paper
     <li> <p  class="project_title">ROS Wrapper for Adafruit LSM9DS1 IMU</p>
         <a target="_blank" class="btn my_btn_blue" href ="https://github.com/OOyindamola/lsm9ds1_ros_python" style="color:white"  role="button">
       Code</a>
-    <p> This is a ROS package for publishing Adafruit LSM9DS1 9DOF IMU data on Jetson Nano using i2c.</li>
-</ol>
+    < class="jt"p> This is a ROS package for publishing Adafruit LSM9DS1 9DOF IMU data on Jetson Nano using i2c.</li>
+</ul>
+
+
+
+
+
+</div>
+
+<button
+        type="button"
+        class="btn btn-danger btn-floating btn-lg"
+        id="btn-back-to-top"
+        >
+  <i class="fa fa-arrow-up"></i>
+</button>
+</div>

@@ -8,14 +8,17 @@ permalink: /talks/
 <p> workshops, seminars and talks </p> -->
 
 <!-- <hr> -->
+<div id="myBtnContainer">
+<button class="btn active" onclick="filterSelection('all')"> Show all</button>
+<button class="btn" onclick="filterSelection('teaching')"> Teaching</button>
+<button class="btn" onclick="filterSelection('workshop')"> Workshops</button>
+<button class="btn" onclick="filterSelection('talks')"> Talks</button>
+</div>
 
-
-<div>
-
-
-
-
+<div class="container">
+<div class="filterDiv teaching">
 <h1>Teaching</h1>
+
 <hr>
 <div class="grid_">
   <div class="talk-grid-container">
@@ -48,9 +51,12 @@ permalink: /talks/
 
  </p></div>
 </div>
+
 <br>
 
 <br>
+</div>
+<div class="filterDiv workshop">
 <h1>Workshops</h1>
 <hr>
 <div class="grid_">
@@ -106,10 +112,14 @@ Navigation system using camera and inertial measurement unit (IMU) in an indoor 
     I co-presented the preliminary results of our work at the conference. Authors:  Kumat Ashwin, Omotuyi Oyindamola, Deshpande A. M., Calabrese Nate, Kumar Manish
     </p></div>
 </div>
+
 <br>
 
 
 <br>
+</div>
+
+<div class="filterDiv talks">
 <h1>Talks</h1>
 <hr>
 <div class="grid_">
@@ -165,6 +175,7 @@ Navigation system using camera and inertial measurement unit (IMU) in an indoor 
 <br>
 
 <br>
+</div>
 <button
         type="button"
         class="btn btn-danger btn-floating btn-lg"
