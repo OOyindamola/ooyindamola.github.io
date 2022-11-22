@@ -495,7 +495,7 @@ z-index: 1;
         margin: 25px 25px 25px 25px;
         padding-bottom: 15px;
         text-align: justify;
-        font-size: 15px;
+        font-size: 17px;
         // font-family: "Roboto Light";
         font-weight: 300 !important;
     }
@@ -526,7 +526,7 @@ z-index: 1;
   margin-left: 25px;
 }
 
-.blog_date { grid-area: blog_date;
+.blog_date {grid-area: blog_date;
   margin-left: 25px;
 
 color: white;
@@ -801,7 +801,8 @@ color: white;
 .filterDiv {
     display: none;
     animation:animatezoom 0.9s;
-    opacity: 1;
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+  
 }
 
 .show {
